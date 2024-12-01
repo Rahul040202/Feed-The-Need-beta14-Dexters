@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Home Page</title>
+  </head>
+  <body>
+    <div class="container">
+        <div class="wrapper-container">
+          <h2>Welcome <%= userDetails[0].name %> ,</h2>
+          <div class="row d-flex">
+          <section class="col-7">
+            <h3>Personal Details</h3>
+            <span class="text-design"><b>Name:</b><%= userDetails[0].name %> </span><br>
+            <span class="text-design"><b>Contact No:</b><%= userDetails[0].phone %> </span><br>
+            <span class="text-design"><b>Email:</b><%= userDetails[0].email %> </span><br>
+            <span class="text-design"><b>Address:</b>Lorem ducimus dolore, cumque voluptatem itaque, repudiandae molestias qui ipsum dolores voluptatum perspiciatis at reprehenderit.</span><br>
+            <div class="btn-grp m-3">
+                <a class="btn btn-info margin-top margin-bottom" href="/editdonardetails" role="button">Edit Personal Details</a><br>
+                <a class="btn btn-primary margin-top margin-bottom" href="/donarform" role="button">Donate Food</a>
+            </div>
+            <div class="d-flex flex-column align-items-center justify-content-center">
+                <span class="text-center fs-4"><b>Total of people served:</b></span><br>
+                <input class="text-center btn btn-primary btn-design" type="button" value=<%= totalsum %> >            
+            </div>
+            <a href="/">Go back to Dashboard</a>
+          </section>
+          <section class="col-5 ">
+            <h3 class="margin-left-1 text-center">Recent Donations</h3>
+            <div class="row overflow-auto section-height d-flex justify-content-center">
+            <% for(let detail of history){ %>
+            <div class="container border-box d-flex flex-column">
+                <span><b>Quantity of Food Donated:</b><%= detail.quantity %> </span>
+                <span><b>Food for:</b><%= detail.type %> </span>
+                <span><b>Date:</b><%= detail.date %> </span>
+                <span
+                ><b>Location:</b
+                ><a
+                    href=<%=`https://www.google.com/maps/@${detail.latitude},${detail.longitude}z`%> 
+                    target="_blank"
+                    >Click here..</a
+                ></span
+                >
+            </div>
+            <% } %>
+        </div>
+        </section>
+      </div>
+    </div>
+    </div>
+    <script src="../../js/bootstrap.min.js"></script>
+  </body>
+</html>

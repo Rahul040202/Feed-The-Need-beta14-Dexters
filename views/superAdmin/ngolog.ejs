@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Public Form</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrapper-container">
+        <h1 class="text-center">NGO log</h1>
+        <table style="width: 100%" class="margin-bottom">
+          <tr class="text-center">
+            <th>Donar ID</th>
+            <th>Receiver ID</th>
+            <th>Status</th>
+          </tr>
+          <% for(let value of details){ %>
+          <tr class="text-center">
+            <td><%= value.donarID %></td>
+            <td><%= value.receiverID %></td>
+            <td>Success</td>
+          </tr>
+          <% } %>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

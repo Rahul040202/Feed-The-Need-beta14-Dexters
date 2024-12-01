@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Register</title>
+  </head>
+  <body>
+    <div class="container d-flex align-items-center justify-content-center">
+      <div class="wrapper-container col-6">
+        <p class="text-center fs-4"><b>Registration Form</b></p>
+        <form 
+          action="/register"
+          id="form"
+          name="f"
+          method="POST"
+          novalidate
+        >
+          <div class="mb-3">
+            <label for="name" class="form-label"><b>Name of Individual/Organisation</b></label>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              name="name"
+              oninput="RemoveInvalidName()"
+              placeholder="Full Name"
+              required
+            />
+            <div class="feedback-msg" id="msg">
+              <small>Enter a valid name</small>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label"><b>Email address</b></label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              name="email"
+              oninput="removeInvalidEmail()"
+              placeholder="mail@example.com"
+              required
+            />
+            <div class="feedback-msg-e" id="msg-e">
+              <small>Enter a valid email</small>
+            </div>
+          </div>
+
+          
+
+          <div class="mb-3">
+            <label for="suggestionText" class="form-label"><b>Username</b></label>
+            <input
+              class="form-control"
+              id="suggestionText"
+              name="username"
+              oninput="removeInvalidSuggestion()"
+              placeholder="naran12"
+              required
+            ></input>
+            <div class="feedback-msg-suggestion" id="msg-suggestion">
+              <small>Enter a valid username</small>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="password" class="form-label"><b>Password</b></label>
+            <input
+              type="password"
+              class="form-control"
+              id="password"
+              name="password"
+              oninput="removeInvalidPassword()"
+              required
+            />
+            <div class="feedback-msg-p" id="msg-p">
+              <small>Enter a valid Password</small>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="number" class="form-label"><b>Phone Number</b></label>
+            <input
+              type="tel"
+              class="form-control"
+              id="number"
+              name="phone"
+              oninput="removeInvalidNumber()"
+              placeholder="10 digit Number"
+              required
+            />
+            <div class="feedback-msg-n" id="msg-n">
+              <small>Enter a valid number (Format: 'XXXXXXXXXX')</small>
+            </div>
+          </div>
+
+          <p><b>Who are You?</b></p>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="field"
+              value="ngo"
+              id="NGO"
+            />
+            <label class="form-check-label" for="NGO"> NGO </label>
+          </div>
+          <div class="form-check margin-bottom">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="field"
+              value="donar"
+              id="Donar"
+            />
+            <label class="form-check-label" for="Donar"> Donar </label>
+          </div>
+
+          <div class="grp-field d-flex margin-bottom justify-content-between">
+            <button type="submit" class="btn btn-primary">Sign up</button><br />
+            <button
+            type="reset"
+            onclick="resetAll()"
+            class="btn btn-outline-primary clear-btn"
+          >
+            Clear Form
+          </button>
+          </div>
+        </form>
+        <span class="text-center margin-top-for-a"><p>Already have an account? <br> <a href="/login">Login</a></p></span>
+        <a href="/">Go Back to Dashboard</a>
+      </div>
+    </div>
+
+    <script src="/js/registerFormClientSideValidation.js"></script>
+  </body>
+</html>
