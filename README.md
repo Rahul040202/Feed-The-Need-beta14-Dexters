@@ -7,7 +7,6 @@
 *Bridging the gap between food excess and food scarcity*
 
 [![Made with Love](https://img.shields.io/badge/Made%20with-Love-red.svg)](https://github.com/Cipher-unhsiV/Feed-The-Need)
-[![Maintained](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/Cipher-unhsiV/Feed-The-Need)
 
 </div>
 
@@ -144,7 +143,7 @@ GET  /login           # Display login page
 |-------------|-------|------|
 | [![Vishnuvasan](https://avatars.githubusercontent.com/Cipher-unhsiV?s=150&v=1)](https://github.com/Cipher-unhsiV) | [![Rahul](https://avatars.githubusercontent.com/Rahul040202?s=150&v=1)](https://github.com/Rahul040202) | [![John](https://avatars.githubusercontent.com/john-williams-m?s=150&v=1)](https://github.com/john-williams-m) |
 | [GitHub](https://github.com/Cipher-unhsiV) | [GitHub](https://github.com/Rahul040202) | [GitHub](https://github.com/john-williams-m) |
-| [LinkedIn](https://www.linkedin.com/in/cipher-unhsiv/) | [LinkedIn](https://www.linkedin.com/in/rahul-g-9ba993224/) | [LinkedIn](https://www.linkedin.com/in/john-williams-964a81248/) |
+| [LinkedIn](https://www.linkedin.com/in/cipher-unhsiv/) | [LinkedIn](https://www.linkedin.com/in/rahul-g-9ba993224/) | [LinkedIn](https://www.linkedin.com/in/john-williams-m) |
 
 </div>
 
@@ -191,6 +190,3 @@ For questions or suggestions, please reach out to any team member through their 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
-<div align="center">
-Made with ❤️ for a hunger-free world
-</div>
